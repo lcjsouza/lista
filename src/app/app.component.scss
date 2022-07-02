@@ -1,0 +1,44 @@
+/* --- FONTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html,
+body,
+p,
+label,
+button,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* BREAKPOINTS */
+$bp-medium: 768px;
+$bp-medium-large: 992px;
+$bp-4K: 1900px;
+
+@mixin fromMedium {
+    @media only screen and (min-width: $bp-medium) {
+      @content;
+    }
+  }
+  
+  @mixin fromMediumLarge {
+    @media only screen and (min-width: $bp-medium-large) {
+      @content;
+    }
+  }
+  
+  @mixin from4K {
+    @media only screen and (min-width: $bp-4K) {
+      @content;
+    }
+  }
